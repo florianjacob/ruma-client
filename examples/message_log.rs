@@ -1,5 +1,3 @@
-#![feature(conservative_impl_trait)]
-
 extern crate futures;
 extern crate ruma_client;
 extern crate ruma_events;
