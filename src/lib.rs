@@ -225,6 +225,11 @@ where
         })
     }
 
+    /// gets the internal session, for use with Client::new() on next startup
+    pub fn session(&self) -> Session {
+        (*self.0.session.borrow()).clone().unwrap()
+    }
+
     /// Makes a request to a Matrix API endpoint.
     pub(crate) fn request<E>(
         self,
