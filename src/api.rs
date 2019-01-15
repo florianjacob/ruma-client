@@ -205,6 +205,12 @@ pub mod r0 {
         pub use ruma_client_api::r0::membership::ThirdPartySigned;
 
         endpoint!(
+            /// Get a list of the user's current rooms.
+            [r0, membership],
+            joined_rooms
+        );
+
+        endpoint!(
             /// Ban a user from a room.
             [r0, membership],
             ban_user
